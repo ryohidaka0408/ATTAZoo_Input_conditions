@@ -1,0 +1,27 @@
+{
+  "manifest_version": 1,
+  "version": "1.0.0",
+  "type": "APP",
+  "name": {
+    "en": "Input Conditions Plugin",
+    "ja": "入力条件プラグイン"
+  },
+  "description": {
+    "en": "Rule-based control of field hide/read-only/required based on other field values, configurable per create/edit/detail screen.",
+    "ja": "他フィールドの値に応じて、対象フィールドの非表示・編集不可・入力必須を条件ルールで制御します。追加・編集・詳細の画面ごとに個別設定できます。"
+  },
+  "icon": "image/icon.png",
+  "desktop": {
+    "js":  ["js/desktop.js"],
+    "css": ["css/desktop.css"]
+  },
+  "mobile": {
+    "js":  ["js/mobile.js"],
+    "css": ["css/desktop.css"]
+  },
+  "config": {
+    "html": "html/config.html",
+    "js":   ["js/config.js"],
+    "css":  ["css/config.css"]
+  }
+}

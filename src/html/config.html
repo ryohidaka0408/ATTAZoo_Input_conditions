@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>入力条件プラグイン設定</title>
+</head>
+<body>
+  <div class="config-container">
+    <h2 class="config-title">入力条件プラグイン 設定</h2>
+
+    <div class="config-guide">
+      <strong>このプラグインでできること</strong>
+      <ul>
+        <li>タブごとに「非表示」「編集不可」「入力必須」を個別に設定できます（それぞれ独立した条件を持てます）</li>
+        <li>1つのルールに複数条件を設定し、AND（すべて満たす）/ OR（いずれか満たす）で組み合わせられます</li>
+        <li>ルールごとに対象画面（追加・編集、非表示のみ詳細も選択可）を個別に選択できます。詳細画面は編集ができないため、編集不可・入力必須タブには詳細画面の選択肢はありません</li>
+        <li>入力必須タブでは、未入力のまま保存しようとした際に表示するメッセージを自由に設定できます</li>
+      </ul>
+    </div>
+
+    <div class="tab-bar">
+      <button type="button" class="tab-btn active" data-tab="hide">非表示設定</button>
+      <button type="button" class="tab-btn" data-tab="disable">編集不可設定</button>
+      <button type="button" class="tab-btn" data-tab="required">入力必須設定</button>
+    </div>
+
+    <div class="tab-panel" data-tab-panel="hide">
+      <div id="rules-container-hide"></div>
+      <button id="add-rule-btn-hide" type="button" class="btn btn--add-dashed">
+        ＋ ルールを追加
+      </button>
+    </div>
+    <div class="tab-panel" data-tab-panel="disable" style="display:none;">
+      <div id="rules-container-disable"></div>
+      <button id="add-rule-btn-disable" type="button" class="btn btn--add-dashed">
+        ＋ ルールを追加
+      </button>
+    </div>
+    <div class="tab-panel" data-tab-panel="required" style="display:none;">
+      <div id="rules-container-required"></div>
+      <button id="add-rule-btn-required" type="button" class="btn btn--add-dashed">
+        ＋ ルールを追加
+      </button>
+    </div>
+
+    <div id="error-area" class="error-area" style="display:none;"></div>
+
+    <div class="config-footer">
+      <button id="cancel-btn" type="button" class="btn btn--secondary">キャンセル</button>
+      <button id="save-btn"   type="button" class="btn btn--primary">設定を保存</button>
+    </div>
+  </div>
+</body>
+</html>
